@@ -1,0 +1,37 @@
+[project]
+name = "lg-multipole"
+version = "0.1.0"
+description = "Multipolar light-molecule interaction in Laguerre-Gaussian beams"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = [
+    "Laguerre-Gaussian",
+    "orbital angular momentum",
+    "multipole interaction",
+    "structured light",
+]
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "matplotlib>=3.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "ruff>=0.5",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
